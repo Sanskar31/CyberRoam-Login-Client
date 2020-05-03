@@ -20,7 +20,7 @@ def __init__(self, username, pw):
     #self.driver.switch_to_window(driver.window_handles[0])
     self.driver.execute_script("window.open('http://fast.com', 'new_window')")
     #py.hotkey('ctrl', 'tab')
-    sleep(5)
+    sleep(300)
     while(1):
         self.driver.find_element_by_xpath('//input[@id="logincaption"]')\
             .click()
@@ -28,4 +28,4 @@ def __init__(self, username, pw):
             .send_keys(pw)
         self.driver.find_element_by_xpath('//input[@id="logincaption"]')\
             .click()
-        sleep(5)
+        sleep(300)
